@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Effect Webpage - Liza</title>
+</head>
+
+<body>
+
+  <div class="container" id="container">
+    <h1 class="title">Liza</h1>
+    <img src="4XCW.gif" alt=""></img>
+    <p class="subtitle" id="typing-text"></p>
+    <a href="bookshubstr.html">
+      <button class="gts"><span class="txt">Get Started</span></button>
+    </a>
+    <div class="particles" id="particles"></div>
+    <div class="shapes" id="shapes"></div>
+  </div>
+
+  <footer>
+    Connect with me:
+    <a href="https://www.youtube.com/channel/UCXQcOi3rIjRdmxez0ZM-yrw">YouTube</a>|
+  
+    <a href="https://in.pinterest.com/liza_code_the_accent/">Pinterest</a>
+  </footer>
+
+  <audio id="bg-music" loop autoplay muted>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+  </audio>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+img{
+  width: 300px;
+  height: 280px;
+}
+    .container {
+      width: 95%;
+      height: 90vh;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.1s ease-out;
+      overflow: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .title {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      font-size: 40px;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-top: 60px;
+      color: #fdfdfd;
+      opacity: 0.9;
+      min-height: 24px;
+    }
+
+    .gts {
+      margin-top: 60px;
+      width: 200px;
+      height: 50px;
+      background: linear-gradient(#fff ,#ebf5fc);
+      border-radius: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #8db4b5;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+    }
+
+    .gts:hover {
+      background: linear-gradient(#2b6b73, #2b6b73);
+      color: white;
+      box-shadow: 0 0 20px #fff, 0 0 40px #fff;
+    }
+
+    .particles, .shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .particles span, .shapes div {
+      position: absolute;
+      border-radius: 50%;
+      animation: float 10s linear infinite;
+    }
+
+    .particles span {
+      width: 8px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .shapes div {
+      width: 30px;
+      height: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #fff;
+      transform: rotate3d(1, 1, 0, 45deg);
+      animation: spin 15s linear infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    @keyframes spin {
+      from { transform: rotate3d(1, 1, 0, 0deg); }
+      to { transform: rotate3d(1, 1, 0, 360deg); }
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      color: #fff;
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer a {
+      color: #ffd;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .title {
+        font-size: 28px;
+        left: 20px;
+      }
+      .subtitle {
+        font-size: 14px;
+        margin-top: 40px;
+      }
+      .gts {
+        width: 150px;
+        font-size: 16px;
+      }
+    }
+  </style>
+
+
+  <script>
+    const phrases = [
+      "Creating beautiful things with code 💻✨",
+      "Web Developer 🧑‍💻",
+      "Creative Coder 🌈",
+      "Design. Code. Repeat. 🔁"
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    const typingText = document.getElementById("typing-text");
+
+    function typeLoop() {
+      if (charIndex < phrases[phraseIndex].length) {
+        typingText.innerHTML += phrases[phraseIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeLoop, 70);
+      } else {
+        setTimeout(() => {
+          typingText.innerHTML = "";
+          charIndex = 0;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          setTimeout(typeLoop, 200);
+        }, 2000);
+      }
+    }
+    window.onload = typeLoop;
+
+    document.addEventListener("mousemove", (e) => {
+      let xAxis = (window.innerWidth / 2 - e.pageX) / 180;
+      let yAxis = (window.innerHeight / 2 - e.pageY) / 180;
+      document.querySelector(".container").style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+
+    document.addEventListener("mouseleave", () => {
+      document.querySelector(".container").style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
+    pinterest
+    const particleContainer = document.getElementById("particles");
+    for (let i = 0; i < 30; i++) {
+      const span = document.createElement("span");
+      span.style.left = `${Math.random() * 100}%`;
+      span.style.animationDelay = `${Math.random() * 10}s`;
+      particleContainer.appendChild(span);
+    }
+
+    const shapeContainer = document.getElementById("shapes");
+    for (let i = 0; i < 10; i++) {
+      const div = document.createElement("div");
+      div.style.left = `${Math.random() * 100}%`;
+      div.style.top = `${Math.random() * 100}%`;
+      div.style.animationDelay = `${Math.random() * 10}s`;
+      shapeContainer.appendChild(div);
+    }
+  </script>
+</body>
+</html>
