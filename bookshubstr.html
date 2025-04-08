@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D Effect Webpage</title>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <div class="navbar">
+      <div class="logo">Liza.official</div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <center>
+            <a href="about.html" target="_blank">
+                <a href="aboutdev.html">   <button class="about-btn">👩‍💻 About the Developer</button></a>
+            </a>
+          </center>
+          
+          
+          <div class="about-section" id="aboutSection">
+           
+          </div>
+          
+      </div>
+    </div>
+
+    
+      
+    
+
+    <div class="content">
+      <div class="video-grid">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZyYtVLUSctY?si=IDGOgJakj5THkKP1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h3>Watch on YouTube</h3>
+          <p>Sample YouTube Embed</p>
+        </div>
+        <div class="video">
+          <video preload="metadata" controls>
+            <source src="ad of liza upload.mp4" type="video/mp4" />
+          </video>
+          <h3>Genuine English</h3>
+          <p>Channel by Liza</p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Iz32EyYZIUw?si=q7uvR6Vtsu3LLiWA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h3>Sample Video</h3>
+          <p>Channel Name</p>
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/1jcf8csk3pQ?si=2SeIvx2uJGiaVASx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h3>Sample Video</h3>
+          <p>Channel Name</p>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/fUaVm2ZEaEs"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    style="width:100%; height:360px; border-radius:12px;">
+            </iframe>
+            <h3>Watch Liza's Short!</h3>
+            <p>From: Genuine English</p>
+          </div>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/YI6cZqiGsOg"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    style="width:100%; height:360px; border-radius:12px;">
+            </iframe>
+            <h3>Another Short by Liza!</h3>
+            <p>From: Tech Dispersed</p>
+          </div>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/fzdVqnVLX_g"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    style="width:100%; height:360px; border-radius:12px;">
+            </iframe>
+            <h3>Watch this new short!</h3>
+            <p>By: Liza on Genuine English</p>
+          </div>
+         
+          
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/gx0h9lKtEkY"
+                    frameborder="0"
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    style="width:100%; height:360px; border-radius:12px;">
+            </iframe>
+            <h3>Learn with Liza - Part 2</h3>
+            <p>By: Liza on Genuine English</p>
+          </div>
+          
+       
+      </div>
+
+    </div>
+    <section class="about-developer" id="about">
+        <div class="about-card">
+          <h2>👩‍💻 About the Developer</h2>
+          <p>Hi! I'm <strong>Liza</strong>, a budding developer and content creator from Muzaffarpur. I love coding, designing stylish web pages, and sharing knowledge through my YouTube channels like <em>Genuine English</em> & <em>Tech Dispersed</em>.</p>
+          <p>Wanna connect? Just search <strong>Tech Dispersed /  Genuine English</strong> on YouTube! 💙</p>
+        </div>
+      </section>
+      
+  
+
+   <center> <button class="back-to-top" onclick="scrollToTop()">↑</button></center>
+  </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+     
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      user-select: none;
+    }
+    .about-btn {
+  margin: 30px auto;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #00f7ff, #ff00ff);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00f7ff, 0 0 20px #ff00ff;
+  transition: 0.3s ease;
+  position: absolute;
+
+}
+a{
+    text-decoration: none;
+}
+
+.about-btn:hover {
+  background: linear-gradient(45deg, #ff00ff, #00f7ff);
+  color: #000;
+  box-shadow: 0 0 20px #00f7ff, 0 0 30px #ff00ff;
+}
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transform-style: preserve-3d;
+      transition: transform 0.2s ease-out;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #ff000000;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      width: 200px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    }
+
+    .search-bar input:focus {
+      box-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+    }
+
+    .sidebar {
+      width: 220px;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      height: 100%;
+      overflow-y: auto;
+      padding: 20px 10px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(8px);
+      scrollbar-width: none;
+    }
+
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      padding: 10px;
+      cursor: pointer;
+      color: white;
+      transition: background 0.2s;
+    }
+
+    .sidebar ul li:hover {
+      background-color: #ffffff1a;
+    }
+
+    .content {
+      margin-left: 240px;
+      padding: 90px 20px 20px 20px;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .video {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .video:hover {
+      transform: scale(1.05);
+    }
+
+    .video iframe, .video video {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+    }
+
+    .video h3 {
+      margin-top: 10px;
+      font-size: 16px;
+      color: white;
+    }
+
+    .video p {
+      font-size: 14px;
+      color: #eee;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #ffffff55;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 999;
+    }
+
+    .back-to-top:hover {
+      background: #fff;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Scroll Smooth */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+
+      .content {
+        margin-left: 0;
+        padding-top: 100px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .search-bar input {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+    .about-developer {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 700px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px #fff5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.about-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #fff9;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.dev-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00f7ff;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+.dev-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dev-links a {
+  padding: 10px 18px;
+  background: #00f7ff22;
+  color: white;
+  border: 1px solid #00f7ff;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px #00f7ff55;
+}
+
+.dev-links a:hover {
+  background: #00f7ff;
+  color: black;
+  box-shadow: 0 0 20px #00f7ff;
+}
+
+
+  </style>
+
+
+  <script>
+    // 3D Rotation
+    document.addEventListener("mousemove", (e) => {
+      let xAxis = (window.innerWidth / 2 - e.pageX) / 180;
+      let yAxis = (window.innerHeight / 2 - e.pageY) / 180;
+      document.getElementById("container").style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+
+    document.addEventListener("mouseleave", () => {
+      document.getElementById("container").style.transform = `rotateY(0deg) rotateX(0deg)`;
+    });
+
+    // Back to top button
+    const backToTop = document.querySelector(".back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
